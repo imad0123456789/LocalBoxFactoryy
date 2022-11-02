@@ -1,0 +1,53 @@
+
+
+<div *ngIf="box">
+
+  <h2>{{box.name | uppercase}} Details </h2>
+  <div><span>id: </span>{{box.id}}</div>
+  <div>
+    <label for="box-name">box name: </label>
+    <input id="box-name" [(ngModel)]="box.name"
+           placeholder="Box name"/>
+  </div>
+
+    <div>
+      <label for="box-height"> height: </label>
+      <input id="box-height" [(ngModel)]="box.height" placeholder="height">
+      <label for="box-height"> cm </label>
+    </div>
+
+    <div>
+      <label for="box-lenght"> lenght: </label>
+      <input id="box-lenght" [(ngModel)]="box.lenght" placeholder="lenght">
+      <label for="box-height"> cm </label>
+    </div>
+
+    <div>
+      <label for="box-width"> width: </label>
+      <input id="box-width" [(ngModel)]="box.width" placeholder="width">
+      <label for="box-height"> cm </label>
+    </div>
+
+    <div>
+      <label for="box-type"> type: </label>
+      <input id="box-type" [(ngModel)]="box.type" placeholder="type">
+    </div>
+
+    <div>
+      <label for="box-color"> color: </label>
+      <input id="box-color" [(ngModel)]="box.color" placeholder="color">
+    </div>
+
+    <div>
+      <label for="box-price"> price: </label>
+      <input id="box-price" [(ngModel)]="box.price" placeholder="price">
+      <label for="box-height"> $ </label>
+    </div>
+
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+  </div>
+
+
+
+

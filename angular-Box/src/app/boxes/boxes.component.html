@@ -1,0 +1,24 @@
+<h2> My Boxes </h2>
+
+<div>
+  <label for="new-box">Box name: </label>
+  <input id="new-box" #boxName />
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(boxName.value); boxName.value=''">
+    Add Box
+  </button>
+</div>
+
+<ul class="boxes">
+  <li
+    *ngFor="let box of boxes">
+    <a routerLink="/detail/{{box.id}}">
+    <span class = "badge">{{box.id}}</span> {{box.name}}
+    </a>
+    <button type="button" class="delete" title="delete box"
+            (click)="delete(box)">x</button>
+  </li>
+
+</ul>
+
+
