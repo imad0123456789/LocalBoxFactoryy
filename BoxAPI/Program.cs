@@ -35,13 +35,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors(options =>
+    {
+        options.AllowAnyHeader();
+        options.AllowAnyMethod();
+        options.AllowCredentials();
+    });
 }
-app.UseCors(opts =>
-{
-    opts.AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowCredentials();
-});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
